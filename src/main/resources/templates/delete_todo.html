@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Todo App</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<div>
+	<h1>Welcome to the Reminder Application</h1>
+		<h2>
+			Today's Date: <span th:text="${currentDate}"></span>
+		</h2>
+		<table border="1">
+			<tr>
+				<th>Date</th>
+				<th>Subject</th>
+				<th>Description</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Enabled/Disabled</th>
+				<th>Action</th>
+			</tr>
+			<tr th:each="t:${todolists}">
+				<td th:text="${t.dueDate}"></td>
+				<td th:text="${t.subject}"></td>
+				<td th:text="${t.description}"></td>
+				<td th:text="${t.email}"></td>
+				<td th:text="${t.phno}"></td>
+				<td><label for="checkbox">Recur for next</label><br>
+					<label for="checkbox">7 Days</label>
+					<input class="checkbox" type="checkbox" th:checked="${t.days7}"
+					disabled /> <br>
+					<label for="checkbox">5 Days</label>
+					<input class="checkbox" type="checkbox" th:checked="${t.days5}"
+					disabled /> <br>
+					<label for="checkbox">3 Days</label>
+					<input class="checkbox" type="checkbox" th:checked="${t.days3}"
+					disabled /> <br>
+					<label for="checkbox">2 Days</label>
+					<input class="checkbox" type="checkbox" th:checked="${t.days2}"
+					disabled />
+					
+				</td>
+
+				<td><a th:href="@{/deleteTodo/{id}(id=${t.id})}"><button>Delete</button></a></td>
+			</tr>
+		</table>
+		<a th:href="@{/}"><button>Back</button></a>
+	</div>
+</body>
+</html>

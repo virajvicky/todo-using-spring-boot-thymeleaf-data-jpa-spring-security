@@ -1,0 +1,155 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the login form */
+.login-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Login form header */
+.login-container h1 {
+    margin-bottom: 1.5rem;
+    color: #333333;
+    font-size: 2rem;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555555;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Login button styling */
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Link styling */
+.login-container p {
+    margin-top: 1rem;
+    color: #555555;
+}
+
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+    color: #0056b3;
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc3545;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Logout message styling */
+.logout-message {
+    color: #28a745;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Container for the logout form */
+.logout-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Logout form header */
+.logout-container h1 {
+    margin-bottom: 1.5rem;
+    color: #333333;
+    font-size: 2rem;
+}
+
+/* Logout button styling */
+.logout-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #dc3545; /* Red color for logout button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Link styling */
+.logout-container p {
+    margin-top: 1rem;
+    color: #555555;
+}
+
+.logout-container a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logout-container a:hover {
+    color: #0056b3;
+}

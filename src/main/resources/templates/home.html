@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}" />
+
+</head>
+<body>
+<h1>Welcome to the Reminder Application</h1><h2>
+		Today's Date: <span th:text="${currentDate}"></span>
+	</h2>
+	
+<nav class="navbar">
+		<a th:href="@{/add}">Set Reminder</a>
+		 <a th:href="@{/modify}">Modify
+			Reminder</a> 
+			<a th:href="@{/disabled}">Disabled Reminder</a> 
+			<a
+			th:href="@{/delete}">Delete Reminder</a> 
+			<a th:href="@{/enabled}">Enabled
+			Reminder</a> <a th:href="@{/view}">View your Reminders</a>
+
+	</nav>
+	<div>
+		 <a th:href="@{/}"><button>Back</button></a>
+
+		<a th:href="@{/logout}"><button >Log Out</button></a>
+	</div>
+
+	<div layout:fragment="content">
+	</div>
+
+	<script src="indexset.js"></script>
+
+</body>
+</html>

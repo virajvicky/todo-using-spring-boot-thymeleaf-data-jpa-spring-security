@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}" lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Todo App</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<div>
+		<h1>Welcome to the Reminder Application</h1>
+		<h2>
+			Today's Date: <span th:text="${currentDate}"></span>
+		</h2>
+
+		<form class="form-grid" action="#" th:action="@{/save}" th:object="${todo}"
+			method="post">
+
+			<label for="date">Date :</label> <input type="date"
+				th:field="*{dueDate}"> <label for="text">Subject :</label> <input
+				type="text" th:field="*{subject}" placeholder="subject"> <label
+				for="text">Description :</label> <input type="text"
+				th:field="*{description}" placeholder="description"> <label
+				for="text">Email :</label> <input type="text" th:field="*{email}"
+				placeholder=" email"> <label for="text"> Phone no :</label>
+			<input type="text" th:field="*{phno}" placeholder="phno">
+				
+			
+
+                <label for="checkbox">Recur for next</label><br>
+					<label for="checkbox">7 Days</label>
+					<input type="checkbox" th:field="*{days7}" /> 
+					<label for="checkbox">5 Days</label>
+					<input type="checkbox" th:field="*{days5}" /> 
+					<label for="checkbox">3 Days</label>
+					<input type="checkbox" th:field="*{days3}" /> 
+					<label for="checkbox">2 Days</label>
+					<input type="checkbox" th:field="*{days2}"  />
+					
+
+			<div class="btn"> <button  type="submit">Save</button></div>
+
+		</form>
+		<a th:href="@{/}"><button >Back</button></a>
+	</div>
+</body>
+</html>
